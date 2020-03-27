@@ -23,6 +23,9 @@ Train file: HGSM3D_0+1_20160429_051600.wav https://drive.google.com/open?id=1ELt
 
 Test file: HGSM3B_0+1_20160308_055700.wav https://drive.google.com/open?id=14MtKQZsrecoQ_yIM_zFExgbJShOVOKsi
 
+# Code pipeline
+
+![Software Pipeline](https://github.com/emmanueldufourq/GibbonClassifier/Pipeline.jpg)
 # Usage
 
 Once the training and test files have been downloaded the pipeline is executed as follows
