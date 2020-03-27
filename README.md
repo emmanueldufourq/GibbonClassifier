@@ -22,3 +22,17 @@ Download these two files to run through the example notebooks. Place the train f
 Train file: HGSM3D_0+1_20160429_051600.wav https://drive.google.com/open?id=1ELtriuMC0bXwSyOSjtlKrZzu_3B0BxH8
 
 Test file: HGSM3B_0+1_20160308_055700.wav https://drive.google.com/open?id=14MtKQZsrecoQ_yIM_zFExgbJShOVOKsi
+
+# Usage
+
+Once the training and test files have been downloaded the pipeline is executed as follows
+
+1) `Extract_Audio notebook` - extract audio segments from the original audio file
+
+2) Augmentation_Execution - augment the number of calls
+
+3) Train - train a CNN (modify the network in CNN_Network.py)
+
+4) Prediction - predict using a trained model
+
+5) Post_Processing - apply post processing heuristic
