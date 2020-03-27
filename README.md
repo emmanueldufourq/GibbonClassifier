@@ -25,8 +25,9 @@ Test file: HGSM3B_0+1_20160308_055700.wav https://drive.google.com/open?id=14MtK
 
 # Code pipeline
 
-![Software Pipeline](https://github.com/emmanueldufourq/GibbonClassifier/blob/master/Pipeline.jpg?raw=true)
-# Usage
+<p align="center">
+  <img src="https://github.com/emmanueldufourq/GibbonClassifier/blob/master/Pipeline.jpg?raw=true">
+</p>
 
 Once the training and test files have been downloaded the pipeline is executed as follows
 
