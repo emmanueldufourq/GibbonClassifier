@@ -8,6 +8,8 @@ Emmanuel Dufourq, Ian Durbach, James Hansford, Sam Turvey, Amanda Hoepfner
 
 # Requirements
 
+Install all requirements using `pip install -r requirements.txt`
+
 Numpy
 
 Scipy
