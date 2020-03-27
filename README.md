@@ -31,8 +31,16 @@ Once the training and test files have been downloaded the pipeline is executed a
 
 2) `Augmentation_Execution.ipynb` - augment the number of calls
 
-3) `Train.ipynb` - train a CNN (modify the network in CNN_Network.py)
+3) `Train.ipynb` - train a CNN
 
 4) `Prediction.ipynb` - predict using a trained model
 
 5) `Post_Processing.ipynb` - apply post processing heuristic
+
+# Additional files
+
+1) `CNN_Network.py` - view/edit the CNN network
+
+2) `Hyper_Parameters` - view/edit the CNN hyper-parameters 
+
+3) `No_Post_Processing` - get network output in seconds instead of binary/softmax values
