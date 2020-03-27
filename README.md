@@ -9,11 +9,20 @@ Emmanuel Dufourq, Ian Durbach, James Hansford, Sam Turvey, Amanda Hoepfner
 # Requirements
 
 Numpy
+
 Scipy
+
 Librosa
+
 Pandas
+
 Keras
 
+Sklearn
+
+Pickle
+
+Matplotlib
 
 # Example Data Files
 
