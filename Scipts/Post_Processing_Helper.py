@@ -1,6 +1,6 @@
 import numpy as np
 
-def get_components_heuristic2(values):
+def get_components(values):
     shifted = np.roll(values,1)
     shifted[0] = 0
     difference = shifted - values
@@ -9,7 +9,6 @@ def get_components_heuristic2(values):
     connected_component = []
     i = 0
     while i < len(shifted):
-        #print ('i', i)
         if shifted[i] > 0:
             component = []
             j=0
@@ -36,7 +35,7 @@ def get_connected_components(components, verbose):
         
     return gibbon_indices
 
-def fix_components(preds):
+def check(preds):
     
     cleaned_components = []
     
@@ -44,44 +43,32 @@ def fix_components(preds):
 
         rolled = component - np.roll(component,1)
         rolled[0] = 0
-
-        if len(component) < 25:
+        
+        if len(component) < 20:
             continue
 
-        if np.average(rolled) < 9 and len(component) > 30:
+        if np.average(rolled) < 10:
             cleaned_components.append(component)
             
     return cleaned_components
 
+
 def heuristic(files, folder_location):
 
-	for file in files:
+    for file in files:
 
-	    values = np.loadtxt(folder_location+file+'.wav_binary_prediction.txt').astype(np.int64)
-	    
-	    values = np.where(values==1)[0]
+        values = np.loadtxt(folder_location+file+'.wav_binary_prediction.txt').astype(np.int64)
+        values = values[:,1]  > 0.76
+        values = values.astype(np.int)
+        values = np.where(values == 1)[0]
 
-	    component_prediction = get_components_heuristic2(values)
-	    predict_components = fix_components(component_prediction)
-	    predict_components = get_connected_components(predict_components, 0)
+        component_prediction = get_components(values)
+        component_correct = get_components(correct)
+    
+        predict_components = check(component_prediction)
+        predict_components = get_connected_components(predict_components, 0)
+        correct_components = get_connected_components(component_correct, 0)
 
-	    np.savetxt('../Predictions/{}_post_processing_heuristic.txt'.format(file), np.asarray(predict_components), fmt='%i') 
-	    print ('Saved post-processing in location: /Predictions/{}_post_processing_heuristic.txt'.format(file))
-	    print ()
-
-def no_heuristic(files, folder_location):
-	for file in files:
-
-	    values = np.loadtxt(folder_location+file+'.wav_binary_prediction.txt').astype(np.int64)
-	    
-	    values = np.where(values==1)[0]
-
-	    predict_set = set()
-	    for component_predict in values:
-	        start_predict = component_predict
-	        end_predict = component_predict+10
-	        predict_set.update(range(start_predict, end_predict+1))
-
-	    np.savetxt('../Predictions/{}_post_processing_no_heuristic.txt'.format(file), np.asarray(sorted(predict_set)), fmt='%i') 
-	    print ('Saved post-processing in location: /Predictions/{}_post_processing_no_heuristic.txt'.format(file))
-	    print ()
+        np.savetxt('../Predictions/{}_post_processing_heuristic.txt'.format(file), np.asarray(predict_components), fmt='%i') 
+        print ('Saved post-processing in location: /Predictions/{}_post_processing_heuristic.txt'.format(file))
+        print ()

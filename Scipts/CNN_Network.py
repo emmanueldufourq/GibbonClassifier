@@ -3,25 +3,44 @@ from keras.models import Sequential
 import keras
 import tensorflow as tf
 
-def network():
+def network_2D(conv_layers, fc_layers, conv_filters, dropout_rate, 
+               conv_kernel,max_pooling_size,fc_units,epochs,batch_size):
+    
     model = Sequential()
+    model.add(Conv2D(filters = conv_filters, kernel_size = conv_kernel, input_shape = (128,188,1)
+                     ,activation = 'relu'))
+    model.add(keras.layers.Dropout(rate = dropout_rate))
+    model.add(MaxPool2D(pool_size = max_pooling_size))
     
-    model.add(keras.layers.Conv2D(8, 4, input_shape = (128,188,1), padding='same', activation='relu'))
-    model.add(keras.layers.Dropout(0.40))
-    model.add(keras.layers.MaxPool2D(4,))
-
-    model.add(keras.layers.Conv2D(16, 4, padding='same', activation='relu'))
-    model.add(keras.layers.Dropout(0.40))
-    model.add(keras.layers.MaxPool2D(4,))
-    
-    model.add(keras.layers.Conv2D(16, 4, padding='same', activation='relu'))
-    model.add(keras.layers.Dropout(0.40))
-    model.add(keras.layers.MaxPool2D(4,))
-    
+    for i in range(conv_layers):
+        model.add(Conv2D(filters = conv_filters, kernel_size = conv_kernel, activation = 'relu'))
+        model.add(keras.layers.Dropout(rate=dropout_rate))
+        model.add(MaxPool2D(pool_size=max_pooling_size))
+        
     model.add(keras.layers.Flatten())
-    model.add(keras.layers.Dense(16, activation='relu'))
-    model.add(keras.layers.Dropout(0.40))
+    for i in range(fc_layers):
+        model.add(keras.layers.Dense(units = fc_units, activation='relu'))
+        model.add(keras.layers.Dropout(rate=dropout_rate))
+        
+    model.add(Dense(2, activation = 'softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=['accuracy'])
+    
+    print (model.summary())
+    
+    return model
 
-    model.add(keras.layers.Dense(2, activation=tf.nn.softmax))
+def network():
+
+    conv_layers = 1
+    fc_layers = 1
+    max_pooling_size = 4
+    dropout_rate = 0.4
+    conv_filters = 8
+    conv_kernel = 16
+    fc_units = 32
+    epochs = 40
+    batch_size = 8
+    model = network_2D(conv_layers, fc_layers, conv_filters, dropout_rate, 
+               conv_kernel,max_pooling_size,fc_units,epochs,batch_size)
     
     return model
