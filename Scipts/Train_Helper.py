@@ -76,11 +76,11 @@ def load_training_images(training_folder, training_file):
             print ('Reading file: {}'.format(file_name))
 
             if path.exists(training_folder+'g_'+file_name+'_augmented_img.pkl'):
-                print ('okay gibbon augmented', file_name)
+                print ('Reading file gibbon augmented file: ', file_name)
                 gibbon_X.extend(pickle.load(open(training_folder+'g_'+file_name+'_augmented_img.pkl', "rb" )))
 
             if path.exists(training_folder+'n_'+file_name+'_augmented_img.pkl'):
-                print ('okay non-gibbon augmented', file_name)
+                print ('Reading non-gibbon augmented file:', file_name)
                 noise_X.extend(pickle.load(open(training_folder+'n_'+file_name+'_augmented_img.pkl', "rb" )))
 
             # Read next line
@@ -110,13 +110,13 @@ def prepare_X_and_Y(gibbon_X, noise_X):
 
 def train_model(number_iterations, X, Y):
 
+    seed = create_seed()
+        
     for experiment_id in range(0,number_iterations):
 
         print('Iteration {} starting...'.format(experiment_id))
 
         print ('experiment_id: {}'.format(experiment_id))
-        
-        seed = create_seed()
         
         X_train, X_val, Y_train, Y_val = train_test_split(X, Y, test_size=0.20, 
                                                             random_state=seed, shuffle = True)
