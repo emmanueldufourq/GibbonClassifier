@@ -32,6 +32,14 @@ Matplotlib
 
 # Example Data Files
 
+An overview of our approach is illustrated below.
+
+<p align="center">
+  <img src="https://github.com/emmanueldufourq/GibbonClassifier/blob/master/Overview.png?raw=true">
+</p>
+
+# Example Data Files
+
 Download these two files to run through the example notebooks. Place the train file in Raw_Data/Train and the test file in Raw_Data/Test.
 
 Train file: HGSM3D_0+1_20160429_051600.wav https://drive.google.com/open?id=1ELtriuMC0bXwSyOSjtlKrZzu_3B0BxH8
