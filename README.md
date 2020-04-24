@@ -30,9 +30,9 @@ Pickle
 
 Matplotlib
 
-# Example Data Files
+# Overview of approach
 
-An overview of our approach is illustrated below.
+A brief overview of our approach is illustrated below.
 
 <p align="center">
   <img src="https://github.com/emmanueldufourq/GibbonClassifier/blob/master/Overview.png?raw=true">
