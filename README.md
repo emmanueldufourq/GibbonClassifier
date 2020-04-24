@@ -54,7 +54,7 @@ Test file: HGSM3B_0+1_20160308_055700.wav https://drive.google.com/open?id=14MtK
 
 Once the training and test files have been downloaded the pipeline is executed as follows. Note that the scripts and notebooks are in the `Scripts` folder.
 
-1) `Extract_Audio notebook.ipynb` - extract audio segments from the original audio file
+1) `Extract_Audio.ipynb` - extract audio segments from the original audio file
 
 2) `Augmentation_Execution.ipynb` - augment the number of calls
 
