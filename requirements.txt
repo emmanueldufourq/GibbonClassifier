@@ -1,10 +1,9 @@
 keras == 2.3.1
+soundfile == 0.10.2
 librosa == 0.7.2
 matplotlib == 3.0.3
 numpy == 1.16.2
 pandas == 0.24.2
 scikit_learn == 0.20.3
 scipy == 1.2.1
-soundfile == 0.10.2
 tensorflow == 2.1.0
-
