@@ -4,8 +4,6 @@ In this study we describe the development of a classifier for identifying Hainan
 
 Our goal was to develop an automated classifier for the monitoring project, together with software allowing the classifier to be run without deep learning or programming expertise. Below, we describe the usage of the software.
 
-
-
 # Authors
 
 Emmanuel Dufourq, Ian Durbach, James Hansford, Sam Turvey, Amanda Hoepfner
@@ -57,6 +55,8 @@ The following two notebooks are available for execution. These can be run locall
 1) `Train.ipynb` - extract audio segments from the original audio file, augment and preprocess. Train a CNN.
 
 2) `Predict.ipynb` - predict using a trained model
+
+# Executing code on Google Colab
 
 Training on Google colab: https://colab.research.google.com/drive/12CBJcdsToGW7CKNT1GS0RSgI3TCJNFyt
 
