@@ -75,3 +75,7 @@ Predicting on Google colab: https://colab.research.google.com/drive/16mfhu6STIkf
 5) `Augmentation.py` - all functions which are used to augment the data
 
 6) `Extract_Audio_Helper.py` - all functions which are used to extract and preprocess the audio files
+
+# User manual
+
+https://docs.google.com/document/d/1CBrRDHf-YVaOlHwXYBLFOOEe7RtdDJ5GDwLhrJwWUdE
