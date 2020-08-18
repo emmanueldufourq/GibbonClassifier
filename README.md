@@ -4,6 +4,8 @@ In this study we describe the development of a classifier for identifying Hainan
 
 Our goal was to develop an automated classifier for the monitoring project, together with software allowing the classifier to be run without deep learning or programming expertise. Below, we describe the usage of the software.
 
+This code accompanies the paper: "Automated detection of Hainan gibbon calls for passive acoustic monitoring". DOI: TBA
+
 # Authors
 
 Emmanuel Dufourq, Ian Durbach, James P. Hansford, Amanda Hoepfner. Heidi Ma, Jessica V. Bryant, Christina S. Stender, Wenyong Li, Zhiwei Liu, Qing Chen, Zhaoli Zhou, Samuel T. Turvey
