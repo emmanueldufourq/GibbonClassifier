@@ -78,6 +78,12 @@ Predicting on Google colab: https://colab.research.google.com/drive/16mfhu6STIkf
 
 6) `Extract_Audio_Helper.py` - all functions which are used to extract and preprocess the audio files
 
+# Complete dataset
+
+Training data DOI: TBA
+
+Testing data DOI: TBA
+
 # User manual
 
 https://docs.google.com/document/d/1CBrRDHf-YVaOlHwXYBLFOOEe7RtdDJ5GDwLhrJwWUdE
