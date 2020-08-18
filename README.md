@@ -6,7 +6,7 @@ Our goal was to develop an automated classifier for the monitoring project, toge
 
 # Authors
 
-Emmanuel Dufourq, Ian Durbach, James Hansford, Sam Turvey, Amanda Hoepfner
+Emmanuel Dufourq, Ian Durbach, James P. Hansford, Amanda Hoepfner. Heidi Ma, Jessica V. Bryant, Christina S. Stender, Wenyong Li, Zhiwei Liu, Qing Chen, Zhaoli Zhou, Samuel T. Turvey
 
 # Requirements
 
