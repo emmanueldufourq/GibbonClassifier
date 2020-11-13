@@ -7,4 +7,4 @@ pandas == 0.24.2
 scikit_learn == 0.20.3
 scipy == 1.2.1
 tensorflow == 2.1.0
-tensorflow-gpu == 2.1.0
+tensorflow-gpu == 2.3.1
